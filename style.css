@@ -26,12 +26,13 @@ header img {
   display: block;
 }
 
-/* Przechodzimy do elementu menu, żeby nam się ładnie podświetlało*/
+/* Przechodzimy do elementu menu, żeby nam się ładnie podświetlało
 nav {
   background-color: darkcyan;
 }
+Następuje po skończeniu projektu zmiana dlatego, żeby nie trzeba było uważać na enter w elementach liniowych, który daje spację i niszczy 25%*/
 /* możemy też się odwołać do a.menu {} */
-/*domyślnie są to elementy liniowe, ale można je zmienić w blokowe. blokowe będą pod sobą. A my chcemy żeby miały wartości blokowych ale było obok siebie, stąd wstawiamy wartość inline-block. Czym to się różni od liniowych? Od teraz możemy im nadać szerokość, wysokość, nadać padding itp, z liniowymi jest pod tym względem problem. Dodajemy marginesy od brzegu oraz zmieniamy kolor odnośnika na biały i usuwamy podkreślenie. Śrdkujemy tekst */
+/*domyślnie są to elementy liniowe, ale można je zmienić w blokowe. blokowe będą pod sobą. A my chcemy żeby miały wartości blokowych ale było obok siebie, stąd wstawiamy wartość inline-block. Czym to się różni od liniowych? Od teraz możemy im nadać szerokość, wysokość, nadać padding itp, z liniowymi jest pod tym względem problem. Dodajemy marginesy od brzegu oraz zmieniamy kolor odnośnika na biały i usuwamy podkreślenie. Śrdkujemy tekst 
 nav a {
   display: inline-block;
   width: 25%;
@@ -39,6 +40,43 @@ nav a {
   color: white;
   text-decoration: none;
   text-align: center;
+}
+*/
+/*Gdybyśmy dodali background-color tutaj, to nadal nie będzie widoczny, bo następny tag nav a określa białe tło a jest nad nim. Dlatego używamy wartości overflow: hidden. Dzięki temu element będzie miał taką wysokość jaką zajmują jego "dzieci". Jeśli jest większy niż coś wewnątrz np nav a to ukryje te rzeczy. W naszym przypadku będzie zgodny z tym co zajmują pozycje menu <a> */
+nav {
+  overflow: hidden;
+  height: 100px;
+}
+/*Do nav a dodajemy właściwość block. Oznacza ona, że blokowa rozciągnie nam się na 100%, ale są pod sobą. Jak dodamy właściwość float, to oznacza ułóż obok kolejny element, jeśli się zmieści. I mimo, że są blokowe, to układają się obok siebie. Transition to zmiana, przy all wszstko się zmieni bo to podrodzina. Właściwość transition określamy w elemencie, który zmieniamy w naszym przypaku w elemencie <a> nawigacji. Transition jest wyzwalana przez najechanie myszką na ten element, więc nowe (kolejne) właściwości są określone w hover w kolejnej części. Zmianie mogą ulec właściwści, które sięrżnią, np. background color, Wtedy mamy przejście między jednym kolorem (w elemecie) a drugim (w elemencie a:hover) to właśnie zrobiliśmy. określamy czas, w którym zmiana ma się dokonać (1s) i ease czyli sposób, w jaki ma się dokonać (łagodnie) */
+nav a {
+  display: block;
+  width: 25%;
+  float: left;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: darkcyan;
+  padding: 15px 30px;
+  transition: all 1s ease;
+}
+nav a:hover {
+  background-color: crimson;
+  cursor: pointer;
+}
+/* Aby utworzyć stronę, która będzie w pełni responsywna i miała wyznaczone poszczególne wartości dla rozdzielczości, w których się wyświetla, dodajemy to poniżej. Jeśli strona będzie miała mniej niż 800px to przyciski zmienią się na 50% a nie na 25%*/
+@media (max-width: 800px) {
+  nav a {
+    width: 50%;
+    font-size: 22px;
+  }
+}
+@media (max-width: 500px) {
+  nav a {
+    width: 100%;
+  }
+  h1 {
+    font-size: 40px;
+  }
 }
 /*tak jak napisałem wcześniej, mógłbym teraz napisać nav a:hover albo odwołać się do nadanej klasy w html za pomocą kropki. hover oznacza gdy najedziemy na element co ma się stać. Fajna alternatywa dla tego niżej to np. border-bottom: 10px solid red czyli podkreślenie o wysokości 10px i kolorze czerwonym */
 a.menu:hover {
