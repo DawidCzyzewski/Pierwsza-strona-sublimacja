@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <!-- kodowanie znaków, możemy używać dzięki temu polskich znaków -->
+    <meta charset="UTF-8" />
+    <!-- sposób wyświetlania na urządzeniach mobilnych -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tytuł strony, m.in. będzie w wynikach wyszukiwarki -->
+    <title>Pierwsza strona o sublimacji</title>
+    <!-- importujemy czcionkę, żeby jej móc używać -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,900&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <!-- mogę dodać też favicona czyli taki obrazek obok tytułu strony w zakładce-->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- nieraz dobrze dodać oba, żeby dobrze wyświetlało-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          src="images/sublimacja-590x400.jpg"
+          alt="maszyna do sublimacji podczas pracy"
+        />
+      </header>
+      <!--menu określamy nav-->
+      <nav>
+        <!-- menu zbudowane z odnośników do innych stron. Obecnie wybrana zakładka będzie miała podświetlony inaczej kolor, w tej chwili jesteśmy w index więc strona główna - o nas -->
+        <a class="menu active" href="#"> O nas</a
+        ><a class="menu" href="#"> Sublimacja</a
+        ><a class="menu" href="#">Cennik</a>
+        <a class="menu" href="#">Kontakt</a>
+      </nav>
+      <!-- cała strona, będzie podzielone na article i na filmik yt czyli na iframe -->
+      <section>
+        <article>
+          <h1>Kim jesteśmy i czym jest druk sublimacyjny?</h1>
+          <!-- obrazek jest elementem liniowym i często je wstawiamy w elementy blokowe, jakim jest "p". Z tego powodu nie jest on na zewnątrz a w środku tagu p-->
+          <p>
+            <img
+              class="left"
+              src="images/druk-sublimacyjny.jpg"
+              alt="Osoba
+            ubrana w koszulkę z nadrukiem wykonanym metodą sublimacji"
+            />
+            Jesteśmy firmą zajmującą się drukiem sublimacyjnym na materiale.
+            Zadrukowujemy całe belki wzorami klienta lub wspólnie ustalonymi.
+            Istnieje również możliwość wydruku podglądów oraz druku kilku
+            różnych wzorów na jednej belce.
+          </p>
+          <p>
+            Proces sublimacji polega na wykonaniu wysokiej rozdzielczości druku
+            cyfrowego atramentami sublimacyjnymi na specjalnym papierze
+            transferowym. Otrzymany wydruk zostaje następnie przeniesiony na
+            wybrany materiał przy pomocy wysokich temperatur, które zapewniają
+            mu wysoką kontrastowość kolorów oraz trwałość.
+          </p>
+          <p>
+            Oferujemy również sprzedaż materiałów oraz dodatków krawieckich,
+            doradztwo i pomoc w przygotowaniu wzoru do wydruku oraz pikowanie
+            zadrukowanego materiału metodą bezszwową.
+          </p>
+        </article>
+        <iframe
+          width="1000"
+          height="563"
+          src="https://www.youtube.com/embed/LGzQv1Nx7z4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <footer></footer>
+    </div>
+  </body>
+</html>
