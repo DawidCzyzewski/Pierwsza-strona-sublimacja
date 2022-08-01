@@ -34,7 +34,7 @@ nav {
 /*domyślnie są to elementy liniowe, ale można je zmienić w blokowe. blokowe będą pod sobą. A my chcemy żeby miały wartości blokowych ale było obok siebie, stąd wstawiamy wartość inline-block. Czym to się różni od liniowych? Od teraz możemy im nadać szerokość, wysokość, nadać padding itp, z liniowymi jest pod tym względem problem. Dodajemy marginesy od brzegu oraz zmieniamy kolor odnośnika na biały i usuwamy podkreślenie. Śrdkujemy tekst */
 nav a {
   display: inline-block;
-  width: 24%;
+  width: 25%;
   padding: 15px 30px;
   color: white;
   text-decoration: none;
