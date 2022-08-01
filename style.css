@@ -1,0 +1,49 @@
+/* tak w stylach css dodajemy komentarze */
+/*najpierw wybieramy selektor, gwiazdka oznacza każdy element, czyli dodając ją zaznaczamy wszystkie elementy, stąd dobrze dodaje się do resetowania styli co zaraz zrobimy*/
+* {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  font-family: Roboto, arial;
+  box-sizing: border-box;
+}
+/*margin to margines zewnętrzny, padding to margines wewnętrzny. Można określić "czterema stronami świata" góra prawo dół lewo, a można dodać jedno zero i wtedy do wszystkich czterech przypisze wartość zero */
+/* box-sizing to rozmiar elementu i ma domyślnie ustawioną wartość content-box co oznacza, że z każdej części elementu robi sumę z pikseli i wtedy dopiero wychodzi wartość, np. div {width: 600px; padding-right= 230px; border-right: 20px solid yellow to w sumie div będzie miał 850px, trzeba to sobie dodać. Jeśli ustawimy zamiast domyślnego content-box wartość border-box, to pomimo dodania takich samych wartości sumarycznie będzie miał 600px czyli zadaną szerokość, bo odejmnie od głównego wartości padding-right i border-right */
+
+/*teraz ustawiamy maksymalną szerokość zawartości div id (do tego używamy # a do klasy .) wrapper na 1000px czy ile tam potrzebujemy oraz ustawiamy tekst, żeby był wyśrodkowany a nie od lewej. Jak damy automatyczne marginesy po lewej i prawej to dostosowuje zawartość i szerokość razem*/
+body {
+  background-color: #ddb;
+}
+
+#wrapper {
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+  background-color: white;
+}
+/*można odwołać się do całego tagu, do klasy za pomocą kropki, do identyfikatora za pomocą hasztagu albo po prostu do wskazaneg elementu (lub elementów) w danej ścieżce tagów jak tutaj. Dodamy responsywność do obrazka czyli żeby się dopasowywał do strony rozmiarem */
+
+header img {
+  width: 100%;
+  display: block;
+}
+
+/* Przechodzimy do elementu menu, żeby nam się ładnie podświetlało*/
+nav {
+  background-color: darkcyan;
+}
+/* możemy też się odwołać do a.menu {} */
+/*domyślnie są to elementy liniowe, ale można je zmienić w blokowe. blokowe będą pod sobą. A my chcemy żeby miały wartości blokowych ale było obok siebie, stąd wstawiamy wartość inline-block. Czym to się różni od liniowych? Od teraz możemy im nadać szerokość, wysokość, nadać padding itp, z liniowymi jest pod tym względem problem. Dodajemy marginesy od brzegu oraz zmieniamy kolor odnośnika na biały i usuwamy podkreślenie. Śrdkujemy tekst */
+nav a {
+  display: inline-block;
+  width: 24%;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+/*tak jak napisałem wcześniej, mógłbym teraz napisać nav a:hover albo odwołać się do nadanej klasy w html za pomocą kropki. hover oznacza gdy najedziemy na element co ma się stać. Fajna alternatywa dla tego niżej to np. border-bottom: 10px solid red czyli podkreślenie o wysokości 10px i kolorze czerwonym */
+a.menu:hover {
+  background-color: crimson;
+}
+.active {
+  background-color: crimson;
+}
