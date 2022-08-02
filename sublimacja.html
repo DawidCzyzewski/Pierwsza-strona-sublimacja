@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <!-- kodowanie znaków, możemy używać dzięki temu polskich znaków -->
+    <meta charset="UTF-8" />
+    <!-- sposób wyświetlania na urządzeniach mobilnych -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tytuł strony, m.in. będzie w wynikach wyszukiwarki -->
+    <title>Pierwsza strona o sublimacji</title>
+    <!-- importujemy czcionkę, żeby jej móc używać -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,900&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <!-- mogę dodać też favicona czyli taki obrazek obok tytułu strony w zakładce-->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- nieraz dobrze dodać oba, żeby dobrze wyświetlało-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- dodajemy style, to zostało dodane już po stworzeniu szkieletu strony-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          src="images/sublimacja-590x400.jpg"
+          alt="maszyna do sublimacji podczas pracy"
+        />
+      </header>
+      <!--menu określamy nav-->
+      <nav>
+        <!-- menu zbudowane z odnośników do innych stron. Obecnie wybrana zakładka będzie miała podświetlony inaczej kolor, w tej chwili jesteśmy w index więc strona główna - o nas. Tu WAŻNA UWAGA między elementami liniowymi wstawienie enteru jest traktowane jako spacja, dlatego mi nie wychodziło wcześniej 25% -->
+        <a
+        class="menu"
+        href="index.html"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        O nas</a
+      ><a class="menu active" href="sublimacja.html" target="_blank" rel="noreferrer noopener">
+        Sublimacja</a
+      ><a class="menu" href="cennik.html" target="_blank" rel="noreferrer noopener"
+        >Cennik</a
+      ><a
+        class="menu"
+        href="kontakt.html"
+        target="_blank"
+        rel="noreferrer noopener"
+        >Kontakt</a
+      >
+      </nav>
+      <!-- cała strona, będzie podzielone na article i na filmik yt czyli na iframe -->
+      <section>
+        <article>
+          <h1>O sublimacji</h1>
+          <!-- obrazek jest elementem liniowym i często je wstawiamy w elementy blokowe, jakim jest "p". Z tego powodu img nie jest na zewnątrz a w środku tagu p. Dzięki takiemu zabiegowi dają się one później ładnie ułożyć -->
+          <p>
+            <img
+              class="left"
+              src="images/druk-sublimacyjny.jpg"
+              alt="Osoba
+            ubrana w koszulkę z nadrukiem wykonanym metodą sublimacji"
+            />
+            
+
+<h1>Dental clinic website</h1>
+
+<ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#reviews">Testimonials</a></li>
+  </ul>
+    
+
+<section>
+  <h2 id="about">About</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quod. Nulla ea nobis magnam, fuga vitae temporibus similique quasi, et autem, voluptas ipsam nesciunt! Cumque quisquam id, provident odio maxime tempore molestiae doloribus perspiciatis mollitia temporibus ex veniam hic velit quaerat eius similique rem, enim vero nostrum minus libero iusto voluptate ea error! Cupiditate nam magnam nostrum quae at veritatis consequuntur. Aliquam animi ex earum fugiat iste hic voluptatum, illo quod modi aut quia pariatur a amet repellat minima, doloremque quis veniam tempore ullam accusantium natus aspernatur exercitationem ipsum quas. Eveniet eligendi sunt, nisi placeat dolor ducimus sit distinctio corporis.</p>
+  <p>Sequi doloribus voluptate nulla recusandae, aspernatur optio autem fugiat cum laboriosam soluta? Saepe fugit modi sequi, illum aut voluptas distinctio esse placeat incidunt ea quasi libero dolor expedita sed consequuntur ullam rem, molestiae dolore nostrum obcaecati officia aperiam debitis consectetur ipsam? Illo earum nam quibusdam, repellendus architecto facilis iusto doloremque repellat ea nemo odio, non ad consequuntur distinctio dignissimos id quas reiciendis? Iste consequatur temporibus magnam quos quis voluptatum. Delectus impedit commodi est nobis quaerat maiores quidem sed ipsum odio fugiat architecto reiciendis dolore, molestias porro, temporibus ipsa iste perferendis enim ut ullam corrupti deserunt illo quibusdam. Architecto, fuga modi?</p>
+</section>
+
+<section>
+  <h2 id="features">Features</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quod. Nulla ea nobis magnam, fuga vitae temporibus similique quasi, et autem, voluptas ipsam nesciunt! Cumque quisquam id, provident odio maxime tempore molestiae doloribus perspiciatis mollitia temporibus ex veniam hic velit quaerat eius similique rem, enim vero nostrum minus libero iusto voluptate ea error! Cupiditate nam magnam nostrum quae at veritatis consequuntur. Aliquam animi ex earum fugiat iste hic voluptatum, illo quod modi aut quia pariatur a amet repellat minima, doloremque quis veniam tempore ullam accusantium natus aspernatur exercitationem ipsum quas. Eveniet eligendi sunt, nisi placeat dolor ducimus sit distinctio corporis.</p>
+  <p>Sequi doloribus voluptate nulla recusandae, aspernatur optio autem fugiat cum laboriosam soluta? Saepe fugit modi sequi, illum aut voluptas distinctio esse placeat incidunt ea quasi libero dolor expedita sed consequuntur ullam rem, molestiae dolore nostrum obcaecati officia aperiam debitis consectetur ipsam? Illo earum nam quibusdam, repellendus architecto facilis iusto doloremque repellat ea nemo odio, non ad consequuntur distinctio dignissimos id quas reiciendis? Iste consequatur temporibus magnam quos quis voluptatum. Delectus impedit commodi est nobis quaerat maiores quidem sed ipsum odio fugiat architecto reiciendis dolore, molestias porro, temporibus ipsa iste perferendis enim ut ullam corrupti deserunt illo quibusdam. Architecto, fuga modi?</p>
+</section>
+
+<section>
+  <h2 id="team">Team</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quod. Nulla ea nobis magnam, fuga vitae temporibus similique quasi, et autem, voluptas ipsam nesciunt! Cumque quisquam id, provident odio maxime tempore molestiae doloribus perspiciatis mollitia temporibus ex veniam hic velit quaerat eius similique rem, enim vero nostrum minus libero iusto voluptate ea error! Cupiditate nam magnam nostrum quae at veritatis consequuntur. Aliquam animi ex earum fugiat iste hic voluptatum, illo quod modi aut quia pariatur a amet repellat minima, doloremque quis veniam tempore ullam accusantium natus aspernatur exercitationem ipsum quas. Eveniet eligendi sunt, nisi placeat dolor ducimus sit distinctio corporis.</p>
+  <p>Sequi doloribus voluptate nulla recusandae, aspernatur optio autem fugiat cum laboriosam soluta? Saepe fugit modi sequi, illum aut voluptas distinctio esse placeat incidunt ea quasi libero dolor expedita sed consequuntur ullam rem, molestiae dolore nostrum obcaecati officia aperiam debitis consectetur ipsam? Illo earum nam quibusdam, repellendus architecto facilis iusto doloremque repellat ea nemo odio, non ad consequuntur distinctio dignissimos id quas reiciendis? Iste consequatur temporibus magnam quos quis voluptatum. Delectus impedit commodi est nobis quaerat maiores quidem sed ipsum odio fugiat architecto reiciendis dolore, molestias porro, temporibus ipsa iste perferendis enim ut ullam corrupti deserunt illo quibusdam. Architecto, fuga modi?</p>
+</section>
+
+<section>
+  <h2 id="reviews">Testimonials</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quod. Nulla ea nobis magnam, fuga vitae temporibus similique quasi, et autem, voluptas ipsam nesciunt! Cumque quisquam id, provident odio maxime tempore molestiae doloribus perspiciatis mollitia temporibus ex veniam hic velit quaerat eius similique rem, enim vero nostrum minus libero iusto voluptate ea error! Cupiditate nam magnam nostrum quae at veritatis consequuntur. Aliquam animi ex earum fugiat iste hic voluptatum, illo quod modi aut quia pariatur a amet repellat minima, doloremque quis veniam tempore ullam accusantium natus aspernatur exercitationem ipsum quas. Eveniet eligendi sunt, nisi placeat dolor ducimus sit distinctio corporis.</p>
+  <p>Sequi doloribus voluptate nulla recusandae, aspernatur optio autem fugiat cum laboriosam soluta? Saepe fugit modi sequi, illum aut voluptas distinctio esse placeat incidunt ea quasi libero dolor expedita sed consequuntur ullam rem, molestiae dolore nostrum obcaecati officia aperiam debitis consectetur ipsam? Illo earum nam quibusdam, repellendus architecto facilis iusto doloremque repellat ea nemo odio, non ad consequuntur distinctio dignissimos id quas reiciendis? Iste consequatur temporibus magnam quos quis voluptatum. Delectus impedit commodi est nobis quaerat maiores quidem sed ipsum odio fugiat architecto reiciendis dolore, molestias porro, temporibus ipsa iste perferendis enim ut ullam corrupti deserunt illo quibusdam. Architecto, fuga modi?</p>
+</section>
+
+
+          </p>
+        </article>
+        <iframe
+          width="1000"
+          height="563"
+          src="https://www.youtube.com/embed/LGzQv1Nx7z4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <footer>
+        Zapraszamy wszystkich do kontaktu, podczas którego jesteśmy w stanie
+        więcej pomóc niż nasza strona internetowa :)
+      </footer>
+    </div>
+  </body>
+</html>
