@@ -1,0 +1,160 @@
+HTML CSS 
+
+    Result
+    Skip Results Iframe
+
+EDIT ON
+
+/* Using a sans serif font and increasing the size of the characters */
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+/* Shift the heading text to the left, by default it is centered */
+table caption {
+  text-align: left;
+}
+
+/* We "collapse" the frames of adjacent cells */
+table {
+  border-collapse: collapse;
+}
+
+/* 
+  Add a border and padding to the cells, the distance from the content to the border.
+  To control the vertical position, the caption-side property is used.
+*/
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #2a2a2a;
+}
+/* tak w stylach css dodajemy komentarze */
+/*najpierw wybieramy selektor, gwiazdka oznacza każdy element, czyli dodając ją zaznaczamy wszystkie elementy, stąd dobrze dodaje się do resetowania styli co zaraz zrobimy*/
+* {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  font-family: Roboto, arial;
+  box-sizing: border-box;
+}
+/*margin to margines zewnętrzny, padding to margines wewnętrzny. Można określić "czterema stronami świata" góra prawo dół lewo, a można dodać jedno zero i wtedy do wszystkich czterech przypisze wartość zero */
+/* box-sizing to rozmiar elementu i ma domyślnie ustawioną wartość content-box co oznacza, że z każdej części elementu robi sumę z pikseli i wtedy dopiero wychodzi wartość, np. div {width: 600px; padding-right= 230px; border-right: 20px solid yellow to w sumie div będzie miał 850px, trzeba to sobie dodać. Jeśli ustawimy zamiast domyślnego content-box wartość border-box, to pomimo dodania takich samych wartości sumarycznie będzie miał 600px czyli zadaną szerokość, bo odejmnie od głównego wartości padding-right i border-right */
+
+/*teraz ustawiamy maksymalną szerokość zawartości div id (do tego używamy # a do klasy .) wrapper na 1000px czy ile tam potrzebujemy oraz ustawiamy tekst, żeby był wyśrodkowany a nie od lewej. Jak damy automatyczne marginesy po lewej i prawej to dostosowuje zawartość i szerokość razem*/
+body {
+  background-color: #ddb;
+}
+
+#wrapper {
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+  background-color: white;
+}
+/*można odwołać się do całego tagu, do klasy za pomocą kropki, do identyfikatora za pomocą hasztagu albo po prostu do wskazaneg elementu (lub elementów) w danej ścieżce tagów jak tutaj. Dodamy responsywność do obrazka czyli żeby się dopasowywał do strony rozmiarem */
+
+header img {
+  width: 100%;
+  display: block;
+}
+
+/* Przechodzimy do elementu menu, żeby nam się ładnie podświetlało
+  nav {
+    background-color: darkcyan;
+  }
+  Następuje po skończeniu projektu zmiana dlatego, żeby nie trzeba było uważać na enter w elementach liniowych, który daje spację i niszczy 25%*/
+/* możemy też się odwołać do a.menu {} */
+/*domyślnie są to elementy liniowe, ale można je zmienić w blokowe. blokowe będą pod sobą. A my chcemy żeby miały wartości blokowych ale było obok siebie, stąd wstawiamy wartość inline-block. Czym to się różni od liniowych? Od teraz możemy im nadać szerokość, wysokość, nadać padding itp, z liniowymi jest pod tym względem problem. Dodajemy marginesy od brzegu oraz zmieniamy kolor odnośnika na biały i usuwamy podkreślenie. Śrdkujemy tekst 
+  nav a {
+    display: inline-block;
+    width: 25%;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  */
+/*Gdybyśmy dodali background-color tutaj, to nadal nie będzie widoczny, bo następny tag nav a określa białe tło a jest nad nim. Dlatego używamy wartości overflow: hidden. Dzięki temu element będzie miał taką wysokość jaką zajmują jego "dzieci". Jeśli jest większy niż coś wewnątrz np nav a to ukryje te rzeczy. W naszym przypadku będzie zgodny z tym co zajmują pozycje menu <a> */
+nav {
+  overflow: hidden;
+  height: 100px;
+}
+/*Do nav a dodajemy właściwość block. Oznacza ona, że blokowa rozciągnie nam się na 100%, ale są pod sobą. Jak dodamy właściwość float, to oznacza ułóż obok kolejny element, jeśli się zmieści. I mimo, że są blokowe, to układają się obok siebie. Transition to zmiana, przy all wszstko się zmieni bo to podrodzina. Właściwość transition określamy w elemencie, który zmieniamy w naszym przypaku w elemencie <a> nawigacji. Transition jest wyzwalana przez najechanie myszką na ten element, więc nowe (kolejne) właściwości są określone w hover w kolejnej części. Zmianie mogą ulec właściwści, które sięrżnią, np. background color, Wtedy mamy przejście między jednym kolorem (w elemecie) a drugim (w elemencie a:hover) to właśnie zrobiliśmy. określamy czas, w którym zmiana ma się dokonać (1s) i ease czyli sposób, w jaki ma się dokonać (łagodnie) */
+nav a {
+  display: block;
+  width: 25%;
+  float: left;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: darkcyan;
+  padding: 15px 30px;
+  transition: all 1s ease;
+}
+nav a:hover {
+  background-color: crimson;
+  cursor: pointer;
+}
+/* Aby utworzyć stronę, która będzie w pełni responsywna i miała wyznaczone poszczególne wartości dla rozdzielczości, w których się wyświetla, dodajemy to poniżej. Jeśli strona będzie miała mniej niż 800px to przyciski zmienią się na 50% a nie na 25%*/
+@media (max-width: 800px) {
+  nav a {
+    width: 50%;
+    font-size: 22px;
+  }
+}
+@media (max-width: 500px) {
+  nav a {
+    width: 100%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+/*tak jak napisałem wcześniej, mógłbym teraz napisać nav a:hover albo odwołać się do nadanej klasy w html za pomocą kropki. hover oznacza gdy najedziemy na element co ma się stać. Fajna alternatywa dla tego niżej to np. border-bottom: 10px solid red czyli podkreślenie o wysokości 10px i kolorze czerwonym */
+a.menu:hover {
+  background-color: crimson;
+}
+.active {
+  background-color: crimson;
+}
+/*nadajemy margines między article a menu oraz odsuwamy od linku YT. Po dodaniu padding zrobiliśmy linie po prawej i lewej stronie dzięki czemu obrazek oraz tekst oddalił się od krawędzi strony*/
+article {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+/*jeśli określimy div np. na 300px na 300px kwadrat i dodamy padding 100px, to NA ZEWNĄTRZ tego diva stworzy się margines o szerokości 100 px w każdą stronę. Jeśli dodamy jeszcze np border 20px solid red to znowu się element zwiększy o 20 px na zewnątrz z obramowaniem jednego koloru czerwongo. Jeśli dodamy dodatkowo np. margin-right: 30px to obrazek przesunie się o 30px w lewo bo od prawej ma margines (niewidoczny) 30px. Marin nie jest częścią elementu, nie dziedziczy koloru, jest jakby obok. Jeśli nawet dodamy box-sizing: border-box to margin jest poza border-box, reszta jest w środku */
+article h1 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 10% 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid crimson;
+}
+/* Teraz dodajemy do obrazka opływanie przez niego tekstu po prawej stronie. Odpowiedzialny za to jest atrybut float. Potem dodajemy padding, żeby odsunąć tekst po prawej. Za pomocą border-radius dodajemy elipsę wokół */
+img.left {
+  float: left;
+  margin: 0px 10px 10px 0;
+  width: 30%;
+  border-radius: 30% 30%;
+}
+/* SELEKTOR p zdefiniowanie obiektu, do którego się odwołujemy stylami. text-align o wartości justify rozciąga tekst na całą szerokość. line-height określa wysokość linii   */
+aricle p {
+  text-align: justify;
+  line-height: 25px;
+  font-size: 18px;
+  padding: 15px 0;
+}
+/* teraz byśmy chcieli, żeby link do yt się zmniejszał wraz z pomniejszaniem strony. Dzięki atrybutowi width dodaliśmy responsywność. Stara się dzięki temu korzystać ze 100% miejsca, które posiada*/
+iframe {
+  width: 100%;
+}
+/* Jeśli wiemy, że nasz obiekt ma określoną ilość px (tak jak niżej sztywno ją określiliśmy, więc wiemy), to możemy powiedzieć np. niech linia tekstu ma 40px. Mamy tylko jedną linię więc się środkuje. text-align wyśrodkuje na szerokość. Później odsuwamy od iframe  */
+footer {
+  height: 40px;
+  background-color: darkcyan;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 10px;
+}
